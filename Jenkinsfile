@@ -12,7 +12,7 @@ pipeline {
         mavenFlow(pauseOnSuccess: "true") {
         }
         */
-        mavenFlow(cdBranches: ['pod-template-by-name']) {
+        mavenFlow(cdOrganisation: "jstrachan", cdBranches: ['pod-template-by-name']) {
         }
       }
     }
