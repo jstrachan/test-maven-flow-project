@@ -8,7 +8,11 @@ pipeline {
   stages {
     stage('Maven Release') {
       steps {
+        /*
         mavenFlow(pauseOnSuccess: "true") {
+        }
+        */
+        mavenFlow(cdBranches: ['pod-template-by-name']) {
         }
       }
     }
