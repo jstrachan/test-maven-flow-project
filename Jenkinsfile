@@ -8,8 +8,12 @@ pipeline {
   stages {
     stage('Maven Release') {
       steps {
+        mavenFlow {
+        }  
+        /* 
         mavenFlow(pauseOnSuccess: "true") {
         }
+        */
       }
     }
   }
