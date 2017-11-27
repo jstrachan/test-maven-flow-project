@@ -9,8 +9,8 @@ pipeline {
     stage('Maven Release') {
       steps {
         mavenFlow {
-          pauseOnSuccess = true
-          pauseOnFailure = true
+          pauseOnSuccess = 'true'
+          pauseOnFailure = 'true'
         }
       }
     }
