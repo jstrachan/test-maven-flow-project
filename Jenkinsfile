@@ -1,6 +1,5 @@
 node {
   stage('Maven Release') {
-    mavenFlow {
-    }
+    mavenFlow
   }
 }
