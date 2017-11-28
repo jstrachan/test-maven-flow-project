@@ -8,8 +8,12 @@ pipeline {
   stages {
     stage('Maven Release') {
       steps {
-        mavenFlow(cdOrganisation: "jstrachan", cdBranches: ['pod-template-by-name'], pauseOnSuccess: "true", pauseOnFailure: "true") {
-        }
+        mavenFlow(
+          cdOrganisation: "jstrachan", 
+          cdBranches: ['pod-template-by-name'], 
+
+          //pauseOnSuccess: "true", pauseOnFailure: "true",
+        ) 
       }
     }
   }
