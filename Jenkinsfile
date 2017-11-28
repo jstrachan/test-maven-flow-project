@@ -1,5 +1,5 @@
 node {
   stage('Maven Release') {
-    mavenFlow
+    mavenFlow cdOrganisation: "jstrachan", cdBranches: ['scripted-cd'] 
   }
 }
