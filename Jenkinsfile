@@ -11,8 +11,8 @@ pipeline {
         mavenFlow(
           cdOrganisation: "jstrachan", 
           cdBranches: ['pod-template-by-name'], 
-
-          //pauseOnSuccess: "true", pauseOnFailure: "true",
+          pauseOnSuccess: "true", 
+          pauseOnFailure: "true",
         ) 
       }
     }
