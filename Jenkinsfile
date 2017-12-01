@@ -1,6 +1,7 @@
 pipeline {
   agent {
     kubernetes {
+      label "jenkins-build-pod"
       podTemplate {
         inheritFrom "fabric8-maven"
       }
