@@ -1,8 +1,9 @@
 pipeline {
   agent {
     kubernetes {
-      label "fabric8-maven"
-      podTemplateName "fabric8-maven"
+      podTemplate {
+        inheritFrom "fabric8-maven"
+      }
     }
   }
   stages {
@@ -10,7 +11,7 @@ pipeline {
       steps {
         mavenFlow(
           cdOrganisation: "jstrachan", 
-          cdBranches: ['pod-template-by-name-pause'], 
+          cdBranches: ['master'], 
           pauseOnSuccess: "true", 
           pauseOnFailure: "true",
         ) 
