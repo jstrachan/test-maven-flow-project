@@ -11,6 +11,7 @@ pipeline {
         mavenFlow(
           cdOrganisation: "jstrachan", 
           cdBranches: ['kubernetes-inherit-from'], 
+          disableGitPush: true,
 
           //pauseOnSuccess: "true", pauseOnFailure: "true",
         ) 
