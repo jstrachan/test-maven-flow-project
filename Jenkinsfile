@@ -10,7 +10,7 @@ pipeline {
       steps {
         mavenFlow(
           cdOrganisation: "jstrachan", 
-          cdBranches: ['pod-template-by-name'], 
+          cdBranches: ['kubernetes-inherit-from'], 
 
           //pauseOnSuccess: "true", pauseOnFailure: "true",
         ) 
