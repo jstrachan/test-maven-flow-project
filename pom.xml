@@ -19,6 +19,19 @@
     <vertx.verticle>io.openshift.booster.HttpApplication</vertx.verticle>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>artifact-repo-staging</id>
+      <name>Artifact Repository Staging</name>
+      <url>http://artifact-repository/content/repositories/staging/</url>
+    </repository>
+    <snapshotRepository>
+      <id>artifact-repo-snapshots</id>
+      <name>Artifact Repository Snapshots</name>
+      <url>http://artifact-repository/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
   <dependencyManagement>
     <dependencies>
       <dependency>
