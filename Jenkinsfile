@@ -9,12 +9,12 @@ pipeline {
     stage('Maven Release') {
       steps {
         mavenFlow(
+          //pauseOnSuccess: "true", pauseOnFailure: "true",
+
           cdOrganisation: "jstrachan", 
           cdBranches: ['kubernetes-inherit-from'], 
           disableGitPush: true,
-          mavenProfiles: ['no-artifact-repository'], 
-
-          //pauseOnSuccess: "true", pauseOnFailure: "true",
+          mavenProfiles: ['no-artifact-repository'] 
         ) 
       }
     }
