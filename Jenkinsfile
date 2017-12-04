@@ -1,9 +1,6 @@
 pipeline {
   agent {
-    kubernetes {
-      label "fabric8-maven"
-      inheritFrom "fabric8-maven"
-    }
+    label "fabric8-maven"
   }
   stages {
     stage('Maven Release') {
@@ -12,7 +9,7 @@ pipeline {
           //pauseOnSuccess: "true", pauseOnFailure: "true",
 
           cdOrganisation: "jstrachan", 
-          cdBranches: ['kubernetes-inherit-from'], 
+          cdBranches: ['agent-label'], 
           disableGitPush: true,
           mavenProfiles: ['no-artifact-repository'] 
         ) 
