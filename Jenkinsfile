@@ -12,7 +12,13 @@ pipeline {
           cdBranches: ['agent-label'], 
           disableGitPush: true,
           mavenProfiles: ['no-artifact-repository'] 
-        ) 
+        ) {
+          promoteArtifacts {
+            pre {
+              echo "====> hook invoked before promote artifacts!"
+            }
+          }
+        }
       }
     }
   }
