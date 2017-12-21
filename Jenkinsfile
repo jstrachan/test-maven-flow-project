@@ -1,13 +1,19 @@
 pipeline {
   agent {
-    kubernetes {
-      label "fabric8-maven"
-    }
+    label "fabric8-maven"
   }
   stages {
     stage('Maven Release') {
       steps {
-        mavenFlow {
+        mavenFlow(
+          cdOrganisation: "jstrachan", 
+          cdBranches: ['master']
+        ) {
+          promoteArtifacts {
+            pre {
+              echo "====> hook invoked before promote artifacts!"
+            }
+          }
         }
       }
     }
