@@ -7,9 +7,9 @@ pipeline {
       steps {
         mavenFlow {
           cdOrganisation "jstrachan"
-          cdBranches 'agent-label' 
           disableGitPush true
-          mavenProfiles 'no-artifact-repository' 
+          cdBranches(['agent-label']) 
+          mavenProfiles(['no-artifact-repository']) 
           
           promoteArtifacts {
             pre {
