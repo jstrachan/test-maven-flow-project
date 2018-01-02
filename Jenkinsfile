@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label "jx-maven"
+    label "jenkins-maven"
   }
   stages {
     stage('Maven Release') {
