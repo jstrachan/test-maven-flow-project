@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label "fabric8-maven"
+    label "jx-maven"
   }
   stages {
     stage('Maven Release') {
